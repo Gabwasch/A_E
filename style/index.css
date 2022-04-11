@@ -1,0 +1,149 @@
+.logo{
+    width: 15%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+body{
+    color: #fff;    
+    font-family: 'Sansita Swashed', cursive;
+}
+
+h1{
+    font-weight: 400;
+}
+
+h2{
+    font-size: 50px;
+    line-height: 60px;
+    font-family: sans-serif;
+}
+p{
+    line-height: 20px;
+    max-width: 500px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+aside{
+    margin: 70px 20px 20px 20px;
+}
+
+span{
+    color: blueviolet;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+input{
+    height: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+}
+
+form [type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: bold;
+}
+form [type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(27, 2, 51);
+    transition: 0.4s;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+article{
+    background: rgb(255, 255, 255, 0.8);
+    color: black;
+    margin: 40px;
+}
+
+article > img{
+    width: 20%;
+    transition: 1s all;
+	cursor: pointer;
+    margin: 0 auto;
+    padding: 5%;
+}
+
+article > img:hover{
+    transform: scale(1.15);
+}
+
+article > h1{
+    text-align: center;
+}
+
+.paragrafo{
+    color: black;
+    background: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container > div{
+	flex: 1 1 200px;
+    margin: 10px;
+}
+
+.container{
+    opacity: 0;
+    animation-timing-function: ease;
+    transform: translateX(-100px);
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+[data-anime]{
+    opacity: 0;
+    transition: 1.3s;
+}
+
+[data-anime="right"]{
+    transform: translate3d(150px, 0, 0);
+}
+[data-anime="up"]{
+    transform: translate3d(0, 150, 0);
+}
+
+[data-anime="left"]{
+    transform: translate3d(-150px, 0, 0);
+}
+
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+@keyframes slide{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
